@@ -29,8 +29,10 @@ for item in news:
 """
 from .models import NewsItem
 from .core import NewsFetcher
+from .summarizers import SummarizeOptions
 
 __all__ = [
     "NewsItem",
     "NewsFetcher",
+    "SummarizeOptions",
 ]
