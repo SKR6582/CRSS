@@ -19,13 +19,17 @@
 
 
 ## 설치
-```
-pip install feedparser  # 의존성
-```
-현재 패키지는 로컬 모듈 구조입니다. 프로젝트에 `rss_news` 디렉터리를 포함해 사용하거나, 추후 PyPI 패키지로 배포하여 `pip install`로 설치할 수 있습니다.
 
-- 요구 사항: Python 3.9+
-- 의존성: `feedparser`
+프로젝트에 필요한 의존성을 설치하려면 `requirements.txt` 파일을 사용하세요.
+
+```bash
+pip install -r requirements.txt
+```
+
+이 패키지는 로컬 모듈 구조입니다. 프로젝트에 `rss_news` 디렉터리를 포함하여 사용하거나, 나중에 PyPI 패키지로 배포하여 `pip install`로 설치할 수 있습니다.
+
+- **요구 사항**: Python 3.9+
+- **의존성**: `requirements.txt` 참조
 
 
 ## 빠른 시작
@@ -260,3 +264,33 @@ for it in items[:3]:
 
 ## 라이선스
 이 프로젝트는 저장소의 `LICENSE` 파일을 따릅니다.
+
+
+## Discord 봇 예제
+
+이 저장소에는 `rss_news` 라이브러리를 사용하여 최신 뉴스를 Discord 채널에 게시하는 간단한 Discord 봇 예제(`discord_bot.py`)가 포함되어 있습니다.
+
+### 설치
+
+봇을 실행하는 데 필요한 모든 라이브러리를 설치하려면 프로젝트 루트 디렉토리에서 다음 명령을 실행하십시오.
+
+```bash
+pip install -r requirements.txt
+```
+
+### 설정
+1.  프로젝트 루트 디렉토리에 `.env`라는 이름의 파일을 생성합니다.
+2.  `.env` 파일에 Discord 봇 토큰을 다음 형식으로 추가합니다. `YOUR_BOT_TOKEN`을 실제 봇 토큰으로 교체하세요.
+
+    ```
+    DISCORD_BOT_MPSB="YOUR_BOT_TOKEN"
+    ```
+
+### 실행
+봇을 시작하려면 다음 명령어를 실행하세요.
+
+```bash
+python discord_bot.py
+```
+
+봇이 성공적으로 로그인하면, Discord 채널에서 `!news` 명령어를 입력하여 최신 뉴스를 받아볼 수 있습니다.
